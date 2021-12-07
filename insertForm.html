@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pengenalan Boostrap</title>
+        <!-- Menyisipkan Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <!-- Menyisipkan Javascript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+    </head>
+<body>
+    
+<h1 style="text-align: center; color: black;"><b>FORMULIR PENDAFTARAN CALON SISWA BARU SMA</b></h1>
+<br>
+    <table class="table table-striped">
+        <form method="GET" action="insertProses.php">
+            <h2 style="color:cornflowerblue; text-align: left;">BIODATA SISWA</h3>
+            <tr>
+                <td>A. No UN SMP/MTs/Sederajat </td>
+                <td> <input type="text" name="un"> </td>
+            </tr>
+            <tr>
+                <td>B. Nama Lengkap : </td>
+                <td> <input type="text" name="nama"> </td>
+            </tr>
+            <tr>
+                 <td>C. Jenis Kelamin : </td>
+                 <td><input type="radio" name="jenis_kelamin" value="L"> Laki-Laki
+                  <input type="radio" name="jenis_kelamin" value="P">Perempuan</td>
+                 </td>
+            <tr>
+                  <td>&emsp; &emsp; Tempat Lahir </td>
+                  <td><input type="text" name="tempat_lahir"><br></td>
+            </tr>
+            <tr>
+                <td>&emsp; &emsp; Tanggal Lahir </td>
+                <td><input type="date" name="tgl_lahir" value="dd/mm/yy"><br></td>
+            </tr>
+            <tr>
+                <td>D. Nama Orangtua/Wali </td>
+                <td><input type="text" name="nama_ortu"><br></td>
+            </tr>
+            <tr>
+                <td>E. Alamat </td>
+                <td><textarea name="alamat" cols="20" rows="5"></textarea><br></td>
+            </tr>
+            <tr>
+                <td>F. Kota/Kabupaten </td>
+                <td><input type="text" name="kota" ></textarea><br></td>
+            </tr>
+           <tr>
+                <td>G. No Telp </td>
+                <td><input type="number" name="no_telp"><br></td>
+            </tr>
+            <tr>
+                <td>H. Asal Sekolah </td>
+                <td><input type="text" name="asal" ></textarea><br></td>
+            </tr>
+            <tr>
+                <td>I. Agama </td>
+                <td><input type="text" name="agama" ></textarea><br></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-primary" value="kirim">Submit</button>
+                </td>
+                
+                
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
