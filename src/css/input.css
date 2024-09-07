@@ -10,7 +10,7 @@
 
 @layer components {
   .nav-items {
-    @apply mx-8 py-2 text-base text-dark group-hover:text-white dark:text-white dark:group-hover:text-primary lg:group-hover:text-primary lg:dark:hover:text-slate-300;
+    @apply mx-8 py-2 text-base text-dark group-hover:text-white dark:text-white dark:group-hover:text-primary lg:group-hover:text-primary lg:dark:group-hover:text-slate-300;
   }
   .icon-app {
     @apply mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-secondary text-secondary hover:border-primary hover:bg-primary hover:text-white dark:border-indigo-300 dark:text-white dark:hover:bg-white dark:hover:text-primary;
