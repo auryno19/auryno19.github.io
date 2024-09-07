@@ -24,16 +24,9 @@ hamburger.addEventListener("click", function () {
   navMenu.classList.toggle("hidden");
 });
 
-//outside humberger
-window.addEventListener("click", function (e) {
-  if (e.target != hamburger && e.target != navMenu) {
-    hamburger.classList.remove("hamburger-active");
-    navMenu.classList.add("hidden");
-  }
-});
-
 // darkmode
 const darkToggle = document.querySelector("#toggle");
+const toggleLabel = document.querySelector("#toggle-label");
 const html = document.querySelector("html");
 const toggleImg = document.querySelector("#toggle-image");
 
@@ -67,3 +60,16 @@ if (
   darkToggle.checked = false;
   toggleImg.src = "./public/img/moon.svg";
 }
+
+//outside humberger
+window.addEventListener("click", function (e) {
+  if (
+    e.target != hamburger &&
+    e.target != navMenu &&
+    e.target != toggleLabel &&
+    e.target != darkToggle
+  ) {
+    hamburger.classList.remove("hamburger-active");
+    navMenu.classList.add("hidden");
+  }
+});
