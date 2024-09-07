@@ -1044,6 +1044,14 @@ body {
   height: 7rem;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
 .w-1\/6 {
   width: 16.666667%;
 }
