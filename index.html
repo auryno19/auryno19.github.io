@@ -1070,18 +1070,28 @@
                 Silahkan hubungi saya jika memerlukan bantuan
               </p>
             </div>
-            <form>
+            <form
+              method="post"
+              target="_blank"
+              action="https://formsubmit.co/aurynoaga19@gmail.com"
+            >
               <div class="mb-8 w-full px-4">
                 <label
                   for="email"
-                  class="text-base text-primary dark:text-white"
+                  class="mb-10 text-base text-primary dark:text-white"
                   >Email</label
                 >
                 <input
                   id="email"
                   type="email"
-                  class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  name="email"
+                  class="peer mt-2 block w-full rounded-md border bg-slate-200 p-3 text-sm text-dark shadow placeholder:text-slate-400 invalid:text-pink-700 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary invalid:focus:border-pink-700 invalid:focus:ring-pink-700"
                 />
+                <p
+                  class="invisible m-1 text-sm font-semibold text-pink-700 peer-invalid:visible"
+                >
+                  Email tidak valid
+                </p>
               </div>
               <div class="mb-8 w-full px-4">
                 <label for="name" class="text-base text-primary dark:text-white"
@@ -1090,8 +1100,15 @@
                 <input
                   id="name"
                   type="text"
-                  class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  name="name"
+                  class="peer mt-2 block w-full rounded-md border bg-slate-200 p-3 text-sm text-dark shadow placeholder:text-slate-400 invalid:text-pink-700 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary invalid:focus:border-pink-700 invalid:focus:ring-pink-700"
+                  required
                 />
+                <p
+                  class="invisible m-1 text-sm font-semibold text-pink-700 peer-invalid:peer-focus:visible"
+                >
+                  Nama Wajib Diisi
+                </p>
               </div>
               <div class="mb-8 w-full px-4">
                 <label
@@ -1102,8 +1119,15 @@
                 <textarea
                   id="message"
                   type="text"
-                  class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  name="message"
+                  class="peer mt-2 block h-32 w-full rounded-md border bg-slate-200 p-3 text-sm text-dark shadow placeholder:text-slate-400 invalid:text-pink-700 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary invalid:focus:border-pink-700 invalid:focus:ring-pink-700"
+                  required
                 ></textarea>
+                <p
+                  class="invisible m-1 text-sm font-semibold text-pink-700 peer-invalid:peer-focus:visible"
+                >
+                  Pesan Wajib Diisi
+                </p>
               </div>
               <div class="w-full px-4">
                 <button class="button button-primary w-full">Kirim</button>
