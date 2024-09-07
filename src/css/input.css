@@ -30,6 +30,10 @@
     @apply dark:bg-white dark:text-primary;
   }
 
+  .readmore-slide {
+    @apply h-36 overflow-hidden;
+  }
+
   .bg-dark-primary {
     @apply from-40% to-90% dark:bg-gradient-to-tr dark:from-blue-950 dark:to-indigo-950;
   }
@@ -72,5 +76,18 @@
   }
   #toggle:checked ~ label div.toggle-img {
     @apply -translate-x-4;
+  }
+
+  #read-more-1:checked + div {
+    @apply h-auto;
+  }
+  #read-more-2:checked + div {
+    @apply h-auto;
+  }
+  #read-more-3:checked + div {
+    @apply h-auto;
+  }
+  #read-more-4:checked + div {
+    @apply h-auto;
   }
 }
