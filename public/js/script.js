@@ -75,31 +75,20 @@ window.addEventListener("click", function (e) {
 });
 
 // readmore
-const readmore1 = document.querySelector("#read-more-1");
-const readmore2 = document.querySelector("#read-more-2");
-const readmore3 = document.querySelector("#read-more-3");
-const readmore4 = document.querySelector("#read-more-4");
-const text1 = document.querySelector(".readmore-text-1");
-const text2 = document.querySelector(".readmore-text-2");
-const text3 = document.querySelector(".readmore-text-3");
-const text4 = document.querySelector(".readmore-text-4");
-if (readmore1.checked) {
-  text1.innerHTML = "- Read Less -";
-} else {
-  text1.innerHTML = "- Read More -";
-}
-if (readmore2.checked) {
-  text2.innerHTML = "- Read Less -";
-} else {
-  text2.innerHTML = "- Read More -";
-}
-if (readmore3.checked) {
-  text3.innerHTML = "- Read Less -";
-} else {
-  text3.innerHTML = "- Read More -";
-}
-if (readmore4.checked) {
-  text4.innerHTML = "- Read Less -";
-} else {
-  text4.innerHTML = "- Read More -";
-}
+
+const readmores = document.querySelectorAll('[id^="read-more-"]');
+const texts = document.querySelectorAll('[class^="readmore-text-"]');
+
+readmores.forEach((readmore, index) => {
+  readmore.addEventListener("change", () => {
+    if (texts[index]) {
+      texts[index].innerHTML = readmore.checked
+        ? "- Read Less -"
+        : "- Read More -";
+    } else {
+      console.error(
+        `Tidak ditemukan elemen readmore-text dengan indeks ${index}`,
+      );
+    }
+  });
+});

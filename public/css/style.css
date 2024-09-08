@@ -756,8 +756,11 @@ body {
 }
 
 .readmore-slide {
-  height: 9rem;
+  max-height: 9rem;
   overflow: hidden;
+  transition-property: all;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bg-dark-primary {
@@ -872,6 +875,14 @@ body {
 
 .z-\[999\] {
   z-index: 999;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-last {
+  order: 9999;
 }
 
 .m-1 {
@@ -1178,6 +1189,10 @@ body {
   overflow: hidden;
 }
 
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }
@@ -1276,6 +1291,11 @@ body {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .fill-current {
@@ -1383,6 +1403,10 @@ body {
 
 .pt-36 {
   padding-top: 9rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .text-left {
@@ -1668,21 +1692,14 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-#read-more-1:checked + div {
+[id^="read-more-"]:checked + div {
   height: auto;
+  max-height: 100vh;
 }
 
-#read-more-2:checked + div {
-  height: auto;
-}
-
-#read-more-3:checked + div {
-  height: auto;
-}
-
-#read-more-4:checked + div {
-  height: auto;
-}
+/* [id^="read-more-"]:checked ~ label > div {
+    @apply translate-y-10 transition duration-500 ease-in-out;
+  } */
 
 .placeholder\:text-slate-400::-moz-placeholder {
   --tw-text-opacity: 1;
@@ -1895,6 +1912,14 @@ body {
     bottom: 0px;
   }
 
+  .md\:order-first {
+    order: -9999;
+  }
+
+  .md\:order-last {
+    order: 9999;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1954,6 +1979,14 @@ body {
     right: -2.5rem;
   }
 
+  .lg\:order-last {
+    order: 9999;
+  }
+
+  .lg\:order-first {
+    order: -9999;
+  }
+
   .lg\:mx-6 {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -1966,6 +1999,10 @@ body {
 
   .lg\:mt-0 {
     margin-top: 0px;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .lg\:block {

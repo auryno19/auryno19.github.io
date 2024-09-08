@@ -135,7 +135,9 @@
     <section id="hero" class="pt-36">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2">
+          <div
+            class="order-last w-full self-center px-4 lg:order-first lg:w-1/2"
+          >
             <h1
               class="text-base font-semibold text-primary dark:text-white md:text-xl"
             >
@@ -169,7 +171,9 @@
               </button>
             </form>
           </div>
-          <div class="w-full self-end px-4 lg:w-1/2">
+          <div
+            class="mb-8 w-full self-end overflow-hidden px-4 lg:mb-0 lg:w-1/2"
+          >
             <div class="relative mt-10 lg:-right-10 lg:mt-0">
               <img
                 src="./public/img/hero.png"
@@ -200,7 +204,7 @@
 
     <!-- About me Start -->
 
-    <section id="about" class="pb-32 pt-36">
+    <section id="about" class="pb-32 pt-20">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="mb-10 w-full px-4 lg:w-1/2">
@@ -330,7 +334,7 @@
                 >
                   Aplikasi Deteksi Penyakit Gigi
                 </h2>
-                <!-- ada pr disini jangan lupa -->
+
                 <input
                   type="checkbox"
                   class="readmore hidden"
@@ -722,45 +726,7 @@
                 </div>
               </div>
               <div class="flex flex-wrap px-2">
-                <div class="hidden md:block md:w-2/6">
-                  <h2
-                    class="mb-2 text-xl font-bold text-dark dark:text-indigo-100"
-                  >
-                    Studi Indepentedent di Dicoding Batch 6
-                    <span class="text-secondary"> - Bandung (Online) </span>
-                  </h2>
-                  <h3 class="mb-1 text-lg font-medium italic text-secondary">
-                    Mentor
-                  </h3>
-                  <h3
-                    class="mb-2 text-lg font-medium text-dark dark:text-white"
-                  >
-                    Februari 2024 - Juli 2024
-                  </h3>
-                  <p
-                    class="mb-2 text-left text-base text-dark dark:text-indigo-100"
-                  >
-                    Menjadi Mentor pada program Kampus Merdeka Khusus nya di
-                    program Studi Independent di Dicoding Indonesia batch 6 pada
-                    learning path Front End Web dan Back End
-                  </p>
-                  <ul
-                    class="list-disc text-left text-slate-900 dark:text-white"
-                  >
-                    <li>
-                      Membimbing peserta SIB pada 1 kelas yang berisi 25 peserta
-                    </li>
-                    <li>
-                      Mengadakan sesi konsultasi mingguan untuk sesi sharing
-                      kendala dengan peserta
-                    </li>
-                    <li>Mengingatkan sesi-sesi wajib pada program SIB</li>
-                    <li>
-                      Membantu para peserta jika ada kendala yang ingin
-                      diselesaikan pada pembelajaran kelas
-                    </li>
-                  </ul>
-                </div>
+                <div class="hidden md:order-last md:block md:w-2/6"></div>
                 <div class="w-1/6 px-4 md:w-2/6">
                   <div class="relative h-full">
                     <div
@@ -771,7 +737,7 @@
                     ></div>
                   </div>
                 </div>
-                <div class="w-5/6 p-4 md:hidden md:w-2/6">
+                <div class="w-5/6 p-4 md:order-first md:w-2/6">
                   <h2
                     class="mb-2 text-xl font-bold text-dark dark:text-indigo-100"
                   >

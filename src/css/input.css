@@ -31,7 +31,7 @@
   }
 
   .readmore-slide {
-    @apply h-36 overflow-hidden;
+    @apply max-h-36 overflow-hidden transition-all duration-1000 ease-in-out;
   }
 
   .bg-dark-primary {
@@ -78,16 +78,10 @@
     @apply -translate-x-4;
   }
 
-  #read-more-1:checked + div {
-    @apply h-auto;
+  [id^="read-more-"]:checked + div {
+    @apply h-auto max-h-screen;
   }
-  #read-more-2:checked + div {
-    @apply h-auto;
-  }
-  #read-more-3:checked + div {
-    @apply h-auto;
-  }
-  #read-more-4:checked + div {
-    @apply h-auto;
-  }
+  /* [id^="read-more-"]:checked ~ label > div {
+    @apply translate-y-10 transition duration-500 ease-in-out;
+  } */
 }
