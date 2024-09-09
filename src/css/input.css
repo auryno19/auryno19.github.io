@@ -31,7 +31,8 @@
   }
 
   .readmore-slide {
-    @apply max-h-36 overflow-hidden transition-all duration-1000 ease-in-out;
+    @apply max-h-36 overflow-hidden transition duration-1000 ease-in;
+    transition-property: max-height;
   }
 
   .bg-dark-primary {
@@ -81,7 +82,4 @@
   [id^="read-more-"]:checked + div {
     @apply h-auto max-h-screen;
   }
-  /* [id^="read-more-"]:checked ~ label > div {
-    @apply translate-y-10 transition duration-500 ease-in-out;
-  } */
 }
