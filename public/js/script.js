@@ -82,9 +82,17 @@ const texts = document.querySelectorAll('[class^="readmore-text-"]');
 readmores.forEach((readmore, index) => {
   readmore.addEventListener("change", () => {
     if (texts[index]) {
-      texts[index].innerHTML = readmore.checked
-        ? "- Read Less -"
-        : "- Read More -";
+      texts[index].innerHTML = readmore.checked;
+      if (texts[index]) {
+        if (readmore.checked) {
+          texts[index].innerHTML = "- Read Less -";
+        } else {
+          texts[index].innerHTML = "- Read Less -";
+          setTimeout(() => {
+            texts[index].innerHTML = "- Read More -";
+          }, 800);
+        }
+      }
     } else {
       console.error(
         `Tidak ditemukan elemen readmore-text dengan indeks ${index}`,

@@ -82,4 +82,7 @@
   [id^="read-more-"]:checked + div {
     @apply h-auto max-h-screen;
   }
+  [id^="read-more-"]:unchecked + div {
+    @apply h-36;
+  }
 }
